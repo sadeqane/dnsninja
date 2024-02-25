@@ -15,7 +15,7 @@ This project is a representation of small dns application with Laravel and Nextj
     ```bash
     git clone https://github.com/sadeqane/dnsninja.git
     cd dnsninja
-    docker-compose up -d
+    docker compose up -d
     ```
 
 
