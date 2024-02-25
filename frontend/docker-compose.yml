@@ -1,0 +1,9 @@
+version: '3'
+services:
+  dnsninja:
+    build: .
+    ports:
+      - "3000:3000"
+    restart: always
+    environment:
+      - DNS_NINJA_API="http://localhost:8080"
