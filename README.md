@@ -15,7 +15,7 @@ This project is a representation of small dns application with Laravel and Nextj
     ```bash
     git clone https://github.com/sadeqane/dnsninja.git
     cd dnsninja
-    docker-compose up -d
+    docker compose up -d
     ```
 
 
@@ -43,19 +43,19 @@ If you encounter any issues, check the logs using:
 ## Cache strategy
 
 Storage Location  
->>Choose a suitable directory within your project for storing cached data files. Ensure proper permissions for file access.
+> Choose a suitable directory within your project for storing cached data files. Ensure proper permissions for file access.
 
 Cache Key Generation  
->>Create a unique cache key based on the domain name and app name.
+> Create a unique cache key based on the domain name and app name.
 
 Cache Expiration   
->>Utilize the TTL value retrieved from the SOA record of the domain to determine the cache expiration time.
+> Utilize the TTL value retrieved from the SOA record of the domain to determine the cache expiration time.
 
 Cache File Format  
->>JSON format for storing cached data.
+> JSON format for storing cached data.
 
 Cache Check    
->>Before making an API call, check if a cached data exists for the given key and if it's still valid based on the expiration time.
+> Before making an API call, check if a cached data exists for the given key and if it's still valid based on the expiration time.
 
 Cache Hit  
->>In the case of a valid cache, retrieve the data from the file and return it. Otherwise, API will call, store the retrieved data in a new cache, and return it.
+> In the case of a valid cache, retrieve the data from the file and return it. Otherwise, API will call, store the retrieved data in a new cache, and return it.
